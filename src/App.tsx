@@ -3,8 +3,21 @@ import HeroSection from "./components/homeScreen/HeroSection";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <HeroSection />
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
+      <h1>hello</h1>
     </div>
   );
 }
