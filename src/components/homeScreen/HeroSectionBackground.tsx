@@ -4,9 +4,9 @@ const HeroSectionBackground = () => {
   const [height, setHeight] = useState<number>(0);
   const [width, setWidth] = useState<number>(0);
   const [allDots, setAllDots] = useState<any[]>([]);
-  const windowWidth = window.innerWidth;
   const ref = useRef<any>(null);
 
+  // Used to render rows of dots
   const renderRow = (iterative: number) => {
     const rowArray = [];
     for (let i = 0; i < width / 40 - 1; i++) {
@@ -19,15 +19,7 @@ const HeroSectionBackground = () => {
     return rowArray;
   };
 
-  useEffect(() => {
-    ref.current.childNodes.forEach((row: any) => {
-      console.log(typeof row);
-      row.childNodes.forEach((el: any) => {
-        setAllDots((prev) => [...prev, el]);
-      });
-    });
-  }, [ref?.current?.childNodes]);
-
+  // Used to render columns of rows of dots
   const renderGrid = () => {
     const columnArray = [];
     for (let i = 0; i < height / 40 - 1; i++) {
@@ -36,11 +28,28 @@ const HeroSectionBackground = () => {
     return columnArray;
   };
 
+  //  Used to set the height and width of the background when the component mounts
   useEffect(() => {
     setHeight(ref?.current?.clientHeight);
     setWidth(ref?.current?.clientWidth);
-  }, [windowWidth]);
+  }, []);
 
+  // Used to set the height and width of the background when the window is resized
+  window.addEventListener("resize", () => {
+    setHeight(ref?.current?.clientHeight);
+    setWidth(ref?.current?.clientWidth);
+  });
+
+  // Used to set all the dots in the background to an array
+  useEffect(() => {
+    ref.current.childNodes.forEach((row: any) => {
+      row.childNodes.forEach((el: any) => {
+        setAllDots((prev) => [...prev, el]);
+      });
+    });
+  }, [ref?.current?.childNodes]);
+
+  // Used to add the appropriate hovered class to the dot that the mouse is over
   document.onmousemove = (e: any) => {
     const x = e.pageX;
     const y = e.pageY;
