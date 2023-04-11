@@ -1,0 +1,19 @@
+.hero-section {
+  background: #202020 no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+
+.dot{
+  color: #fcfafa;
+    &:hover {
+      background-color: red;
+    }
+}
