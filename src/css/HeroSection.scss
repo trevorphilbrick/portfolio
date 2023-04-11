@@ -4,11 +4,14 @@
     initial-value: rgba(166, 0, 0, 0.0) ;
   }
 .hero-section{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     @media screen and (max-width: 992px) {
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+
     }
     .hero-section-content{
         text-align: center;
@@ -17,7 +20,7 @@
             transition: all 0.6s;
             &:hover{
                 transition: all 0.3s;
-                text-shadow: rgba(166, 0, 0, 1)   0px 0px  12px;
+                text-shadow: rgba(166, 0, 0, 1)   0px 3px  20px ;
             }
             @media screen and (max-width: 992px) {
                 font-size: 2.5em;
@@ -85,12 +88,21 @@
   .hovered{
     .dot{
       transition: width 0.2s, height 0.2s;
+      width: 12px;
+      height: 12px;
+    }
+  }
+  .inner-hovered{
+    background: radial-gradient(rgba(166, 0, 0, 0.5) 0%, rgba(184, 10, 10, 0) 50%);
+  
+    .dot{
+      transition: width 0.2s, height 0.2s;
       width: 10px;
       height: 10px;
     }
   }
-  .secondary-hovered{
-    background: radial-gradient(rgba(166, 0, 0, 0.5) 0%, rgba(184, 10, 10, 0) 50%);
+  .center-hovered{
+    background: radial-gradient(rgba(166, 0, 0, 0.5) 0%, rgba(184, 10, 10, 0) 40%);
   
     .dot{
       transition: width 0.2s, height 0.2s;

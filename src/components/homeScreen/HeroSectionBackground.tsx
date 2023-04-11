@@ -66,9 +66,10 @@ const HeroSectionBackground = () => {
         y > elY - 22 &&
         y < elY + elHeight + 22
       ) {
-        el.classList.add("secondary-hovered");
+        el.classList.add("inner-hovered");
         el.classList.remove("hovered");
         el.classList.remove("selected");
+        el.classList.remove("center-hovered");
         el.classList.remove("outer-hovered");
       } else if (
         x > elX - 65 &&
@@ -76,14 +77,27 @@ const HeroSectionBackground = () => {
         y > elY - 65 &&
         y < elY + elHeight + 65
       ) {
+        el.classList.add("center-hovered");
+        el.classList.remove("hovered");
+        el.classList.remove("selected");
+        el.classList.remove("inner-hovered");
+        el.classList.remove("outer-hovered");
+      } else if (
+        x > elX - 100 &&
+        x < elX + elWidth + 100 &&
+        y > elY - 100 &&
+        y < elY + elHeight + 100
+      ) {
         el.classList.add("outer-hovered");
         el.classList.remove("hovered");
         el.classList.remove("selected");
-        el.classList.remove("secondary-hovered");
+        el.classList.remove("inner-hovered");
+        el.classList.remove("center-hovered");
       } else {
         el.classList.remove("hovered");
         el.classList.remove("selected");
-        el.classList.remove("secondary-hovered");
+        el.classList.remove("inner-hovered");
+        el.classList.remove("center-hovered");
         el.classList.remove("outer-hovered");
       }
     });
