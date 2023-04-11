@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "JetBrains Mono";   
+  src: local("JetBrains-Mono"),
+    url("./assets/JetBrainsMono.ttf") format("truetype");
+}
+
+@property --c {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: rgba(166, 0, 0, 0.0);
+}
+
 .hero-section{
   position: relative;
   height: 100vh;
@@ -6,7 +18,7 @@
   position: fixed;
 }
 .hero-section-background {
-  background: #202020 no-repeat center center;
+  background: radial-gradient(#2b2b2b, #202020) no-repeat center center;
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -35,33 +47,47 @@
 .hovered{
   .dot{
     transition: width 0.2s, height 0.2s;
+    width: 10px;
+    height: 10px;
+  }
+}
+.secondary-hovered{
+  background: radial-gradient(rgba(166, 0, 0, 0.5) 0%, rgba(184, 10, 10, 0) 50%);
+
+  .dot{
+    transition: width 0.2s, height 0.2s;
     width: 8px;
     height: 8px;
   }
 }
-.secondary-hovered{
+.outer-hovered{
+  background: radial-gradient(rgba(166, 0, 0, 0.5) 0%, rgba(184, 10, 10, 0) 30%);
+
   .dot{
     transition: width 0.2s, height 0.2s;
-    width: 4px;
-    height: 4px;
+    width: 6px;
+    height: 6px;
   }
 }
 
 .selected{
+  background: radial-gradient(rgba(166, 0, 0, 0.5) 0%, rgba(184, 10, 10, 0) 70%);
   .dot{
     transition: width 0.2s, height 0.2s;
     width: 12px;
     height: 12px;
   }
 }
+
 #hero-image{
   transform: scale(1);
   transition: 0.2s;
-  background-image: radial-gradient(rgba(166, 0, 0, 0.5) 0%, rgba(184, 10, 10, 0) 0%);
+  background-image: radial-gradient(var(--c) 0%, rgba(184, 10, 10, 0) 60%);
 
   &:hover{
-    transition:  0.2s ;
+    transition: --c 0.5s , transform 0.2s;
     transform: scale(1.1);
-    background-image: radial-gradient(rgba(166, 0, 0, 0.5) 0%, rgba(184, 10, 10, 0) 60%);
+    --c: rgba(166, 0, 0, 0.5);
+    border-radius:33%;
   }
 }
