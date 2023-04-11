@@ -1,11 +1,23 @@
 import "./App.scss";
 import "./assets/JetBrainsMono.ttf";
-import HeroSection from "./components/homeScreen/HeroSection";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import HomePage from "./routes/HomePage";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <HomePage />,
+  },
+  {
+    path: "/about",
+    element: <div>about page</div>,
+  },
+]);
 
 function App() {
   return (
     <div>
-      <HeroSection />
+      <RouterProvider router={router} />
     </div>
   );
 }
