@@ -7,19 +7,19 @@ const CONTENT = [
   {
     title: "Explore",
     description: "Explore my projects and learn more about me.",
-    image: require("../../assets/heroImage.png"),
+    image: require("../../assets/photoThumbnail.jpg"),
     link: "/projects",
   },
   {
     title: "Blog",
     description: "Read my blog posts and learn more about my thoughts.",
-    image: require("../../assets/heroImage.png"),
+    image: require("../../assets/photoThumbnail.jpg"),
     link: "/blog",
   },
   {
     title: "Photography",
     description: "View my photography and learn more about my interests.",
-    image: require("../../assets/heroImage.png"),
+    image: require("../../assets/photoThumbnail.jpg"),
     link: "/photography",
   },
 ];
