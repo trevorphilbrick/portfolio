@@ -3,7 +3,7 @@ import "../../css/HeroSection.scss";
 
 const HeroSection = () => {
   return (
-    <>
+    <div style={{ position: "fixed", top: 0, width: "100%", zIndex: -100 }}>
       <HeroSectionBackground />
       <div className="hero-section">
         <div className="hero-section-content">
@@ -18,10 +18,11 @@ const HeroSection = () => {
             className="hero-section-image"
             src={require("../../assets/heroImage.png")}
             alt="Trevor Philbrick"
+            onLoad={() => console.log("Image loaded")}
           />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

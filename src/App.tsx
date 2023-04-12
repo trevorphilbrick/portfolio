@@ -2,6 +2,7 @@ import "./App.scss";
 import "./assets/JetBrainsMono.ttf";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./routes/HomePage";
+import Navbar from "./components/Navbar";
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div>
+      <Navbar />
       <RouterProvider router={router} />
     </div>
   );
