@@ -31,7 +31,7 @@ const ContentSection = () => {
       className="content-section"
       style={{ marginTop: "100vh", backgroundColor: "#202020" }}
     >
-      <Container>
+      <Container className="content-card-container">
         <Row>
           <Col>
             <h2 className="content-header">Explore</h2>

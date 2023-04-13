@@ -1,7 +1,18 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 [Link to live project](https://portfolio-dxavxazce-trevorphilbrick.vercel.app/)
+
+## TODO
+
+- Complete navigtation architecture
+- Create footer and include socials and links to all of the site
+- Create Photography page
+- Create Blog page
+- Create Projects page
+- Complete Navbar component
+- Begin admin panel
 
 ## Available Scripts
 
