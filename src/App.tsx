@@ -31,7 +31,7 @@ const router = createBrowserRouter([
 function App() {
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAUviuU68Gp7txMcVhjP4BrhHb2fR4CayA",
+  apiKey: process.env.REACT_APP_FIREBASE_KEY,
   authDomain: "portfolio-8b661.firebaseapp.com",
   projectId: "portfolio-8b661",
   storageBucket: "portfolio-8b661.appspot.com",
@@ -44,7 +44,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
-console.log(analytics)
+
   return (
     <div>
       <Navbar />

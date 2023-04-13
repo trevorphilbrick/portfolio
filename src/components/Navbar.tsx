@@ -1,12 +1,10 @@
 import { AiOutlineMenu } from "react-icons/ai";
 import '../css/Navbar.scss'
-import { useEffect, useState } from "react";
+import { useState } from "react";
 const Navbar = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  useEffect(() => {
-    console.log(isVisible);
-  }, [isVisible]);
+
 
 
   return (

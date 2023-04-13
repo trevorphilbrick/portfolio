@@ -11,7 +11,7 @@ const HeroSectionBackground = () => {
     const rowArray = [];
     for (let i = 0; i < width / 40 - 1; i++) {
       rowArray.push(
-        <div className="dot-container" id={`row-${iterative}-Pos-${i}`}>
+        <div className="dot-container" id={`row-${iterative}-Pos-${i}`} key={`row-${iterative}-Pos-${i}`}>
           <div className="dot"></div>
         </div>
       );
@@ -23,7 +23,7 @@ const HeroSectionBackground = () => {
   const renderGrid = () => {
     const columnArray = [];
     for (let i = 0; i < height / 40 - 1; i++) {
-      columnArray.push(<div style={{ display: "flex" }}>{renderRow(i)}</div>);
+      columnArray.push(<div style={{ display: "flex" }} key={`row${i}`}>{renderRow(i)}</div>);
     }
     return columnArray;
   };
