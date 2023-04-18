@@ -1,12 +1,12 @@
+import AddBlogPost from "../components/dashboard/AddBlogPost";
+import "../css/Dashboard.scss";
+
 const Dashboard = () => {
   return (
-    <nav>
-      <ul>
-        <li>Blog</li>
-        <li>Projects</li>
-        <li>Photography</li>
-      </ul>
-    </nav>
+    <div>
+      <h1>Dashboard</h1>
+      <AddBlogPost />
+    </div>
   );
 };
 

@@ -1,12 +1,17 @@
 .navbar{
     display: flex;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+        justify-content: center;
+    }
 }
 
 .navbar-menu{
-    width: 32px;
-    height: 32px;
-    padding-right: 32px;
+    position: absolute;
+    top: 20px;
+    right: 16px;
+    width: 24px;
+    height: 24px;
     transition: all 0.1s ease-in-out;
     color: #e84855;
     &:hover{
@@ -20,11 +25,40 @@
 }
 
 .navbar-list{
+    margin: 24px 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 0 32px;
     list-style: none;
-    transition: all 0.05s ease-in-out
+    transition: all 0.05s ease-in-out;
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        margin: 24px 0;
+    }
+
+}
+
+.navbar-list-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #e84855;
+    transition: all 0.1s ease-in-out;
+    &:hover{
+        transition: all 0.1s ease-in-out;
+        transform: scale(1.1);
+    }
+    &:active{
+        transition: all 0.05s ease-in-out;
+        transform: scale(0.9);
+    }
+
+
+}
+
+.navbar-list-item {
+    text-decoration: none;
+    color: #e84855;
 }
