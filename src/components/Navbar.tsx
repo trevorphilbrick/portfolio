@@ -26,7 +26,7 @@ const Navbar = () => {
       {isVisible ? (
         <div className="navbar-left-container">
           <ul className="navbar-list">
-            <li>Blog</li>
+            <Link to={`blog`}>Blog</Link>
             <li>Projects</li>
             <li>Photography</li>
             <li>
